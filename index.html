@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ai Server BMC Dashboard</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="bmc-app">
+		<aside id="sidebar-region">
+			<div class="logo">Giga BMC</div>
+			<ul class="nav-links">
+				<li>OverView</li>
+				<li>Dashboards</li>
+				<li>Logs</li>
+				<li>Hardware Status</li>
+				<li>Operations</li>
+				<li>Settings</li>
+				<li>Security and access</li>
+				<li>Resource management</li>
+			</ul>
+		</aside>
+
+		<main id="main-region">
+			<div id="content-payload"></div>
+		</main>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.6.0/backbone-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="js/models/PowerModel.js"></script>
+    <script src="js/views/PowerView.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

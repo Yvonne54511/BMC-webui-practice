@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+#bmc-app {
+    display: flex;
+    height: 100vh;
+}
+#sidebar-region {
+    width: 240px;
+    background-color: #0a2240;
+    color: white;
+    padding: 20px 0;
+}
+#sidebar-region .logo {
+    padding: 0 20px 20px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #1a3a60;
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+.nav-links li {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.nav-links li.active, .nav-links li:hover {
+    background-color: #2b8edd;
+}
+#main-region {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+.chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    height: 300px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.telemetry-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+.telemetry-table th {
+    background-color: #2b8edd;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+.telemetry-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
