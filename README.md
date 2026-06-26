@@ -53,7 +53,10 @@ No build step required. Serve the project root with any static file server:
 python3 -m http.server 3000
 
 # Node (npx)
-npx live-server --port=3000
+npx http-server -a 0.0.0.0 -p 3000
+
+# Redfish mock server
+npx http-server -a 0.0.0.0 -p 8000
 ```
 
 Then open `http://127.0.0.1:3000` in your browser.
