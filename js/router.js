@@ -7,21 +7,22 @@ var AppRouter = Backbone.Router.extend({
     },
  
     // below are the callback functions(Actions) for the routes defined abovess
-    showLogin:function(){
+    showLogin: function() {
+        $('#sidebar-region').hide();
         var loginModel = new LoginModel();
-        var loginView = new LoginView({model:loginModel});//the constructor of view is designed to  accept model input
+        var loginView = new LoginView({model: loginModel});
         $('#content-payload').html(loginView.render().el);
     },
     showPower: function() {
-        var livePowerModel = new PowerTelemetry();//setup the model to fetch the data from the server
-        var view = new PowerView({model: livePowerModel}); //setup the view to render the data
-        $('#content-payload').html(view.render().el);//looks for the div with id content-payload in index.htmland renders the view inside it
+        $('#sidebar-region').show();
+        var livePowerModel = new PowerTelemetry();
+        var view = new PowerView({model: livePowerModel});
+        $('#content-payload').html(view.render().el);
         this.updateSidebar('power');
     },
 
-    defaultRoute: function(actions) {
-        $('#content-payload').html('<h2>Welcome</h2><p>Select "Resource management" to see the Power Dashboard.</p>');
-        this.updateSidebar(actions);
+    defaultRoute: function() {
+        this.navigate('login', { trigger: true });
     },
 
     updateSidebar: function(route) {
