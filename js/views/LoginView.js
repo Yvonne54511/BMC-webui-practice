@@ -9,15 +9,23 @@ var LoginView = Backbone.View.extend({
     render: function() {
         //    TODO : change css style
         this.$el.html(`
-            <h2>系統登入</h2>
-            <div>
-                <form id="login-form">
-                    <input type="text" id="username" placeholder="請輸入帳號">
-                    <input type="text" id="password" placeholder="請輸入密碼">
-                    <button type="submit">登入</button>
-                </form>
+            <div class="login-wrapper">
+                <div class="login-card">
+                    <div class="login-logo">Giga BMC</div>
+                    <p class="login-subtitle">系統登入</p>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="username">帳號</label>
+                            <input type="text" id="username" placeholder="請輸入帳號">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密碼</label>
+                            <input type="password" id="password" placeholder="請輸入密碼">
+                        </div>
+                        <button type="submit" class="login-btn">登入</button>
+                    </form>
+                </div>
             </div>
-            
         `);
         return this;
     },
